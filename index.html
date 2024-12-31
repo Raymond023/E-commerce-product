@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=Manrope:wght@200..800&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <script defer src="script.js"></script>
+
+</head>
+<body>
+  <header>
+    <div>
+      <div>
+        <button aria-label="open navigation" class="open-nav" type="button"></button>
+        <a aria-label="go to homepage" class="home-logo" href="#"></a>
+      </div>
+      <div>
+        <button aria-label="shopping cart" class="cart" type="button"></button>
+        <a aria-label="link to user profile" href="#"><img src="images/image-avatar.png" alt=""></a>
+      </div>
+    </div>
+    <nav aria-label="primary">
+      <button aria-label="close navigation" class="close-nav" type="button"></button>
+      <ul>
+        <li>Collections</li>
+        <li>Men</li>
+        <li>Women</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+  </header>
+  <div class="overlay"></div>
+  <main>
+    <div>
+      <button aria-label="previous product" class="arrow previous" type="button"></button>
+      <img src="images/image-product-1.jpg" alt="">
+      <button aria-label="next product" class="arrow next" type="button"></button>
+    </div>
+    <ul>
+        <li>
+          <img src="images/image-product-1-thumbnail.jpg" alt="">
+        </li>
+
+        <li>
+          <img src="images/image-product-2-thumbnail.jpg" alt="">
+        </li>
+        
+        <li>
+          <img src="images/image-product-3-thumbnail.jpg" alt="">
+        </li>
+
+        <li>
+          <img src="images/image-product-4-thumbnail.jpg" alt="">
+        </li>
+      </ul>
+    <h1>Sneaker Company</h1>
+    <h2>Fall Limited Edition Sneakers</h2>
+    <p>
+      These low-profile sneakers are your perfect casual wear companion. Featuring a 
+      durable rubber outer sole, they’ll withstand everything the weather can offer.
+    </p>
+    <p>
+      <span>$125.00</span> <span>50%</span>
+    </p>
+    <p>
+      $250.00
+    </p>
+    <p><img src="images/icon-minus.svg" alt="">0<img src="images/icon-plus.svg" alt=""></p>
+    <button class="add" type="button">Add to cart</button>
+  </main>   
+  
+</body>
+</html>
