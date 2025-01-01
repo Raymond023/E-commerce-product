@@ -18,24 +18,27 @@
 </head>
 <body>
   <header>
-    <div>
+
+    <div class="top-bar">
       <div>
         <button aria-label="open navigation" class="open-nav" type="button"></button>
         <a aria-label="go to homepage" class="home-logo" href="#"></a>
       </div>
+
       <div>
         <button aria-label="shopping cart" class="cart" type="button"></button>
-        <a aria-label="link to user profile" href="#"><img src="images/image-avatar.png" alt=""></a>
+        <a aria-label="link to user profile" class="user" href="/"><img src="images/image-avatar.png" alt="user profile icon"></a>
       </div>
     </div>
+
     <nav aria-label="primary">
       <button aria-label="close navigation" class="close-nav" type="button"></button>
       <ul>
-        <li>Collections</li>
-        <li>Men</li>
-        <li>Women</li>
-        <li>About</li>
-        <li>Contact</li>
+        <li><a href="/">Collections</a></li>
+        <li><a href="/">Men</a></li>
+        <li><a href="/">Women</a></li>
+        <li><a href="/">About</a></li>
+        <li><a href="/">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -46,7 +49,7 @@
       <img src="images/image-product-1.jpg" alt="">
       <button aria-label="next product" class="arrow next" type="button"></button>
     </div>
-    <ul>
+    <ul class="collection">
         <li>
           <img src="images/image-product-1-thumbnail.jpg" alt="">
         </li>
