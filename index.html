@@ -21,8 +21,8 @@
 
     <div class="top-bar">
       <div>
-        <button aria-label="open navigation" class="open-nav" type="button"></button>
-        <a aria-label="go to homepage" class="home-logo" href="#"></a>
+        <button aria-haspopup="dialog" aria-label="menu" class="open-nav" type="button"></button>
+        <a aria-label="homepage" class="home-logo" href="#"><img src="images/logo.svg" alt=""></a>
       </div>
 
       <div>
@@ -30,23 +30,26 @@
         <a aria-label="link to user profile" class="user" href="/"><img src="images/image-avatar.png" alt="user profile icon"></a>
       </div>
     </div>
+    <dialog aria-label="primary" aria-modal="true" class="nav-dialog" id="nav-dialog">
 
-    <nav aria-label="primary">
-      <button aria-label="close navigation" class="close-nav" type="button"></button>
-      <ul>
-        <li><a href="/">Collections</a></li>
-        <li><a href="/">Men</a></li>
-        <li><a href="/">Women</a></li>
-        <li><a href="/">About</a></li>
-        <li><a href="/">Contact</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <button aria-label="close menu" class="close-nav" type="button"></button>
+        <ul>
+          <li><a href="/">Collections</a></li>
+          <li><a href="/">Men</a></li>
+          <li><a href="/">Women</a></li>
+          <li><a href="/">About</a></li>
+          <li><a href="/">Contact</a></li>
+        </ul>
+      </nav>
+
+    </dialog>
+    
   </header>
-  <div class="overlay"></div>
   <main>
-    <div>
+    <div class="gallery">
       <button aria-label="previous product" class="arrow previous" type="button"></button>
-      <img src="images/image-product-1.jpg" alt="">
+      <img class="displayedImage" id="displayedImage" src="images/image-product-1.jpg" alt="">
       <button aria-label="next product" class="arrow next" type="button"></button>
     </div>
     <!-- <ul class="collection">
@@ -81,35 +84,40 @@
     
         <div class="amount">
           <button class="minus" type="button"></button>
-          <span class="quantity">0</span>
+          <!-- <input class="quantity" type="number" name="noOfItems" id="itemAmount"> -->
+          <span class="quantity">0</span> 
           <button class="plus" type="button"></button>
         </div>
 
         <button class="add-item" type="button">
-          <img src="images/icon-cart.svg" alt="icon of a cart">  
+          <img src="images/icon-cart.svg" alt="">  
           Add to cart
         </button>
       </div>
 
       <div aria-live="assertive">
         <div class="cart-content">
+          
           <p>cart</p>
-          
           <div class="item-gotten">
-            <img src="images/image-avatar.png" alt="">
+            
+            <img src="images/icon-cart.svg" alt="">
 
-            <p>000</p>
-            <p>
-              <span>000</span>
-              <span class="result">000</span>
-            </p>
-
-            <img src="images/icon-delete.svg" alt="">
-            <button aria-label="checkout" class="checkout" type="button">
-              checkout
-            </button>
+            <div class="purchase">
+              <p id="name"></p>
+              <p>
+                <span id="purchase-quantity"></span>
+                <span class="result">000</span>
+              </p>
+            </div>
+            
+            <button aria-label="delete button" class="delete" type="button"></button>
+            
+            
           </div>
-          
+          <button aria-label="checkout" class="checkout" type="button">
+            checkout
+          </button>
           
         </div>
 
