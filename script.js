@@ -1,10 +1,38 @@
 'use strict';
 
-// nav function
+// nav menu
+// selecting quantity
+// gallery
+// showing cart
+// adding items to cart
+
+// variables
+
 const body = document.body;
 const closeNav = document.querySelector('.close-nav');
 const openNav = document.querySelector('.open-nav');
 const navDialog = document.querySelector('.nav-dialog')
+
+const plus = document.querySelector('.plus');
+const minus = document.querySelector('.minus');
+const quantity = document.querySelector('.quantity');
+
+const displayedImage = document.querySelector('#displayedImage');
+const previous = document.querySelector('.previous');
+const next = document.querySelector('.next');
+
+const cartLogo = document.querySelector('.cart-logo');
+const cart = document.querySelector('.cart');
+const checkout = document.querySelector('.checkout');
+
+const discountPrice = document.querySelector('.discount-price');
+const discountPriceValue = discountPrice.textContent.replace('$', '');
+const result = document.querySelector('.result');
+const additem = document.querySelector('.add-item');
+
+
+
+// nav function
 
 openNav.addEventListener('click', () => {
     body.classList.toggle('overlay');
@@ -25,13 +53,8 @@ navDialog.addEventListener('click', (e) =>{
     }
 })
 
-// end of nav function
 
-
-const plus = document.querySelector('.plus');
-const minus = document.querySelector('.minus');
-const quantity = document.querySelector('.quantity');
-
+// selecting quantity
 
 let counter = 0;
 
@@ -53,24 +76,43 @@ function totalQuantity() {
 }
 totalQuantity()
 
-const cart = document.querySelector('.cart');
-const cartContent = document.querySelector('.cart-content');
-const checkout = document.querySelector('.checkout');
+// gallery
 
-cart.addEventListener('click', () => {
+let currentInageIndex = 0;
+let images = [
+    'images/image-product-1.jpg',
+    'images/image-product-2.jpg',
+    'images/image-product-3.jpg',
+    'images/image-product-4.jpg'    
+];
+
+function changeImage (direction) {
+    currentInageIndex += direction;
+
+    if(currentInageIndex >= images.length) {
+        currentInageIndex = 0;
+    } else if (currentInageIndex < 0) {
+        currentInageIndex = images.length -1;
+    }
+    displayedImage.src =images[currentInageIndex];
+}
+
+next.addEventListener('click', function() {changeImage(+1)});
+previous.addEventListener('click', function() {changeImage(-1)});
+
+
+// showing cart
+
+cartLogo.addEventListener('click', () => {
     
-    if(cartContent.style.display === 'block') {
-        cartContent.classList.toggle('hide');
+    if(cart.style.display === 'block') {
+        cart.classList.toggle('hide');
     } else {
-        cartContent.classList.toggle('show');
+        cart.classList.toggle('show');
     }
 })
 
-const discountPrice = document.querySelector('.discount-price');
-const discountPriceValue = discountPrice.textContent.replace('$', '');
-const result = document.querySelector('.result');
-const additem = document.querySelector('.add-item');
-
+// adding items to cart
 
 
 function tototalCost () {
@@ -95,29 +137,28 @@ if(result.textContent != '0') {
 const quantityBought = document.querySelector('#purchase-quantity');
 
 
-// gallery
-const displayedImage = document.querySelector('#displayedImage');
-const previous = document.querySelector('.previous');
-const next = document.querySelector('.next');
 
-let currentInageIndex = 0;
-let images = [
-    'images/image-product-1.jpg',
-    'images/image-product-2.jpg',
-    'images/image-product-3.jpg',
-    'images/image-product-4.jpg'    
-];
 
-function changeImage (direction) {
-    currentInageIndex += direction;
+// let cartItems = [];
 
-    if(currentInageIndex >= images.length) {
-        currentInageIndex = 0;
-    } else if (currentInageIndex < 0) {
-        currentInageIndex = images.length -1;
-    }
-    displayedImage.src =images[currentInageIndex];
-}
+// function addNewItem (itemNmae, itemPrice) {
+//     const item = {
+//         name: itemNmae,
+//         price: itemPrice
+//     };
+//     cartItems.push();
+//     rendercart();
+// }
 
-next.addEventListener('click', function() {changeImage(+1)});
-previous.addEventListener('click', function() {changeImage(-1)});
+// // function deleteItem (e) {
+// //     e.target.removeChild()
+// //     rendercart()
+// // }
+
+// function render () {
+//     const cartItemCOntainer = document.querySelector('.cart-tems-list');
+//     cartItemCOntainer.innerHTML = '';
+
+//     let total = 0;
+    
+// }

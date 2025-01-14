@@ -26,7 +26,7 @@
       </div>
 
       <div>
-        <button aria-label="shopping cart" class="cart" type="button"></button>
+        <button aria-label="shopping cart" class="cart-logo" type="button"></button>
         <a aria-label="link to user profile" class="user" href="/"><img src="images/image-avatar.png" alt="user profile icon"></a>
       </div>
     </div>
@@ -51,24 +51,29 @@
       <button aria-label="previous product" class="arrow previous" type="button"></button>
       <img class="displayedImage" id="displayedImage" src="images/image-product-1.jpg" alt="">
       <button aria-label="next product" class="arrow next" type="button"></button>
+    
+      <!-- <ul class="collection">
+          <li>
+            <img src="images/image-product-1-thumbnail.jpg" alt="">
+          </li>
+
+          <li>
+            <img src="images/image-product-2-thumbnail.jpg" alt="">
+          </li>
+          
+          <li>
+            <img src="images/image-product-3-thumbnail.jpg" alt="">
+          </li>
+
+          <li>
+            <img src="images/image-product-4-thumbnail.jpg" alt="">
+          </li>
+        </ul> -->
+
     </div>
-    <!-- <ul class="collection">
-        <li>
-          <img src="images/image-product-1-thumbnail.jpg" alt="">
-        </li>
+    
+    <div class="wrapper">
 
-        <li>
-          <img src="images/image-product-2-thumbnail.jpg" alt="">
-        </li>
-        
-        <li>
-          <img src="images/image-product-3-thumbnail.jpg" alt="">
-        </li>
-
-        <li>
-          <img src="images/image-product-4-thumbnail.jpg" alt="">
-        </li>
-      </ul> -->
       <div class="text-content">
         <h1>Sneaker Company</h1>
         <h2>Fall Limited Edition Sneakers</h2>
@@ -81,47 +86,51 @@
           <span class="discount">50%</span>
           <span class="full-price">$250.00</span>
         </p>
-    
-        <div class="amount">
-          <button class="minus" type="button"></button>
-          <!-- <input class="quantity" type="number" name="noOfItems" id="itemAmount"> -->
-          <span class="quantity">0</span> 
-          <button class="plus" type="button"></button>
-        </div>
 
-        <button class="add-item" type="button">
-          <img src="images/icon-cart.svg" alt="">  
-          Add to cart
-        </button>
-      </div>
+        <div class="quantity-wrapper">
 
-      <div aria-live="assertive">
-        <div class="cart-content">
-          
-          <p>cart</p>
-          <div class="item-gotten">
-            
-            <img src="images/icon-cart.svg" alt="">
-
-            <div class="purchase">
-              <p id="name"></p>
-              <p>
-                <span id="purchase-quantity"></span>
-                <span class="result">000</span>
-              </p>
-            </div>
-            
-            <button aria-label="delete button" class="delete" type="button"></button>
-            
-            
+          <div class="quantity-container">
+            <button class="minus" type="button"></button>
+            <span class="quantity">0</span> 
+            <button class="plus" type="button"></button>
           </div>
-          <button aria-label="checkout" class="checkout" type="button">
-            checkout
+  
+          <button class="add-item" type="button">
+            <img src="images/icon-cart.svg" alt="">  
+            Add to cart
           </button>
-          
+
         </div>
+    
 
       </div>
+
+    </div>
+      
+
+    <div aria-live="assertive" class="cart-wrapper">
+
+      <div class="cart">
+
+        <p>cart</p>
+
+        <p class="empty">Your cart is empty</p>
+
+        <ul>
+          <li>
+
+            
+          </li>
+        </ul>
+        
+        <button aria-label="checkout" class="checkout" type="button">
+          checkout
+        </button>
+
+      </div>
+    
+
+    </div>
 
   </main>   
   
